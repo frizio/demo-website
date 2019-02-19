@@ -43,8 +43,8 @@ body {
 }
 
 .header-content .logo {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 
 .title {
@@ -102,3 +102,42 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* RESPONSIVE */
+@media (max-width: 560px) {
+    .header::after {
+      height: 50vh;
+    }
+    
+    .header-content {
+      top: 5%;
+      margin-top: 5px;
+    }
+  
+    .header-content .logo {
+      height: 140px;
+      width: 140px;
+    }
+  
+    .header-content .text {
+      display: none;
+    }
+    
+    .grid-4, .grid-2 {
+      grid-template-columns: 1fr;
+    }
+  
+    .services .div {
+      padding: 1.4rem 1rem;
+    }
+  }
+  
+  /* Landscape */
+  @media(max-height: 500px) {
+    .header-content .title, .header-content .text {
+      display: none;
+    }
+    .header-content {
+      top: 0;
+    }
+  }
